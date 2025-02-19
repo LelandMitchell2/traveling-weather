@@ -88,7 +88,7 @@ class WeatherService {
     );
   }
   // TODO: Complete buildForecastArray method
-  private buildForecastArray(currentWeather: Weather, weatherData: any[]) {
+  private buildForecastArray(weatherData: any[]) {
     const forecastArray = [];
     for (let i = 1; i < weatherData.length; i++) {
       const forecast = weatherData[i];
@@ -107,9 +107,10 @@ class WeatherService {
     const coordinates = await this.fetchAndDestructureLocationData();
     const weatherData = await this.fetchWeatherData(coordinates);
     const currentWeather = this.parseCurrentWeather(weatherData);
-    const forecastArray = this.buildForecastArray(currentWeather, weatherData.data.weather);
-    return { currentWeather, forecastArray
+    const forecastArray = this.buildForecastArray(weatherData.data.weather);
+    return { currentWeather, forecastArray };
   }
 }
+
 
 export default new WeatherService();
