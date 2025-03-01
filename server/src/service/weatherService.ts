@@ -10,6 +10,7 @@ interface Coordinates {
 class Weather {
   constructor(
     public city: string,
+    public date: string,
     // public country: string,
     public icon: string,
     public iconDescription: string,
@@ -19,6 +20,7 @@ class Weather {
     
   ) {
     this.city = city;
+    this.date = date;
     // this.country = country;
     this.icon = icon;
     this.iconDescription = iconDescription;
@@ -88,6 +90,7 @@ class WeatherService {
     // console.log(response);
     return new Weather(
       this.cityName,
+      currentWeather.dt_txt,
       currentWeather.weather[0].icon,
       currentWeather.weather[0].description,
       currentWeather.main.temp,
@@ -102,6 +105,7 @@ class WeatherService {
       const forecast = weatherData[i];
       const weather = new Weather(
         this.cityName,
+        forecast.dt_txt,
         forecast.weather[0].icon,
         forecast.weather[0].description,
         forecast.main.temp,
