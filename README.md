@@ -16,6 +16,8 @@
 
   ## Usage
   Use it to know what the weather is like for cities you may be traveling through. it has a search history that you can click to bring up that weather again to help with recalling the weather for the next city you maybe visiting. If you decide not to visit a city you can easily click the delete icon next to it and it will be removed from the search history.
+  ![image](https://github.com/user-attachments/assets/3f13ecae-0fb3-4af8-a4b0-71c411a511cb)
+
 
   ## License
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
