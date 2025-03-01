@@ -45,20 +45,22 @@ const fetchWeather = async (cityName: string) => {
   });
 
   const weatherData = await response.json();
-
   console.log('weatherData: ', weatherData);
+  console.log('weatherData: ', weatherData.currentWeather);
 
-  renderCurrentWeather(weatherData[0]);
-  renderForecast(weatherData.slice(1));
+
+  renderCurrentWeather(weatherData.currentWeather);
+  renderForecast(weatherData.forecastArray);
 };
 
 const fetchSearchHistory = async () => {
-  const history = await fetch('/api/weather/history', {
+  const history = await fetch('/api/weather/history/', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   });
+  console.log('history: ', history);
   return history;
 };
 
@@ -78,6 +80,7 @@ Render Functions
 */
 
 const renderCurrentWeather = (currentWeather: any): void => {
+  console.log('render', currentWeather);
   const { city, date, icon, iconDescription, tempF, windSpeed, humidity } =
     currentWeather;
 
