@@ -1,7 +1,7 @@
-# Vehicle Builder
+# Traveling Weather
 
   ## Description
-  A fun texted based vehicle builder with additional functionality after you build your vehicle ( i.e. start the engine, increase speed, reduce speed, turn left, turn right, ect.)
+  This Weather app provides users with real-time weather as well as the forcast for 5 days for any city they want, it will display if it is sunny/cloudy with an icon, the temp in °F th wind speed in MPH and the humiditypercentage
 
   ## Table of Contents
   * [Installation](#installation)
@@ -12,10 +12,10 @@
   * [Questions](#questions)
 
   ## Installation
-  download the REPO, navigate to the repo in bash, run node index.js
+  navigate to https://traveling-weather.onrender.com/ and input the city you  would like to know the weather for and click search
 
   ## Usage
-  Use to cure boredom
+  use it to know what the weather is like for cities you may be traveling through. it has a search history that you can click to bring up that weather again to help with recalling the weather for the next city you maybe visiting. If you decide not to visit a city you can easily click the delete icon next to it and it will be removed from the search history.
 
   ## License
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
